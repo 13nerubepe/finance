@@ -4,13 +4,22 @@ import { Dashboard } from './app/pages/dashboard/dashboard';
 import { Documentation } from './app/pages/documentation/documentation';
 import { Landing } from './app/pages/landing/landing';
 import { Notfound } from './app/pages/notfound/notfound';
+import { AppConstantRoute } from '@/app/constants';
 
 export const appRoutes: Routes = [
     {
         path: '',
         component: AppLayout,
         children: [
+
             { path: '', component: Dashboard },
+
+            {
+                path: AppConstantRoute.Actif_PATH,
+                loadComponent: () => import('@/pages/actif/actif.component').then((c) => c.ActifComponent),
+                data: { breadcrumb: 'ProgrammesEtActions',
+                loadChildren: () => import('./app/pages/uikit/uikit.routes') },
+
             { path: 'uikit', loadChildren: () => import('./app/pages/uikit/uikit.routes') },
             { path: 'documentation', component: Documentation },
             { path: 'pages', loadChildren: () => import('./app/pages/pages.routes') }
