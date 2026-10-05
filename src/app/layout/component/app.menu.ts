@@ -27,7 +27,7 @@ export class AppMenu {
                 label: 'Home',
                 items: [
                     { label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/'] },
-                    { label: 'Actif', icon: 'pi pi-fw pi-home', routerLink: ['/uikit/table'] },
+                    { label: 'Actif', icon: 'pi pi-fw pi-home', routerLink: ['/actifs'] },
                     { label: 'Analyse de volatilité', icon: 'pi pi-fw pi-home', routerLink: ['/'] },
                     { label: 'Comparaison', icon: 'pi pi-fw pi-home', routerLink: ['/'] },
                     { label: 'Actualités', icon: 'pi pi-fw pi-home', routerLink: ['/'] },

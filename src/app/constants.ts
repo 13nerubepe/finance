@@ -1,3 +1,3 @@
 export const AppConstantRoute = {
-    Actif_PATH: 'actif',
+    Actif_PATH: 'actifs',
 }

@@ -16,9 +16,9 @@ export const appRoutes: Routes = [
 
             {
                 path: AppConstantRoute.Actif_PATH,
-                loadComponent: () => import('@/pages/actif/actif.component').then((c) => c.ActifComponent),
-                data: { breadcrumb: 'ProgrammesEtActions',
-                loadChildren: () => import('./app/pages/uikit/uikit.routes') },
+                loadComponent: () => import('./app/pages/actif/actif').then((c) => c.ActifComponent),
+                data: { breadcrumb: 'Actif' },
+            },
 
             { path: 'uikit', loadChildren: () => import('./app/pages/uikit/uikit.routes') },
             { path: 'documentation', component: Documentation },
