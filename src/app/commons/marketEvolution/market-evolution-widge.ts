@@ -2,19 +2,15 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChartModule } from 'primeng/chart';
 import { SelectButtonModule } from 'primeng/selectbutton';
+import { FormsModule } from '@angular/forms';
 
 @Component({
     standalone: true,
     selector: 'app-market-evolution-widget',
-    imports: [
-        CommonModule,
-        ChartModule,
-        SelectButtonModule
-    ],
+    imports: [CommonModule, ChartModule, SelectButtonModule, FormsModule],
     templateUrl: './market-evolution-widget.html'
 })
 export class MarketEvolutionWidget {
-
     selectedPeriod = '1M';
 
     periods = [
@@ -26,27 +22,11 @@ export class MarketEvolutionWidget {
     ];
 
     chartData = {
-        labels: [
-            '01',
-            '05',
-            '10',
-            '15',
-            '20',
-            '25',
-            '30'
-        ],
+        labels: ['01', '05', '10', '15', '20', '25', '30'],
         datasets: [
             {
                 label: 'Indice du marché',
-                data: [
-                    102,
-                    105,
-                    103,
-                    108,
-                    112,
-                    110,
-                    116
-                ],
+                data: [102, 105, 103, 108, 112, 110, 116],
                 fill: true,
                 tension: 0.4
             }
@@ -79,5 +59,4 @@ export class MarketEvolutionWidget {
         // appel API pour récupérer les données
         // this.marketService.getEvolution(this.selectedPeriod)
     }
-
 }
