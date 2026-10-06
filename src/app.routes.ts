@@ -24,6 +24,11 @@ export const appRoutes: Routes = [
                 loadComponent: () => import('./app/pages/actualites/actualites').then((c) => c.ActualitesComponent),
                 data: { breadcrumb: 'Actualité' },
             },
+            {
+                path: AppConstantRoute.ComparaisonActif_PATH,
+                loadComponent: () => import('./app/pages/comparaison-actif/comparaison-actif').then((c) => c.ComparaisonActifComponent),
+                data: { breadcrumb: 'ComparairéActifs' },
+            },
 
             { path: 'uikit', loadChildren: () => import('./app/pages/uikit/uikit.routes') },
             { path: 'documentation', component: Documentation },
