@@ -19,6 +19,11 @@ export const appRoutes: Routes = [
                 loadComponent: () => import('./app/pages/actif/actif').then((c) => c.ActifComponent),
                 data: { breadcrumb: 'Actif' },
             },
+            {
+                path: AppConstantRoute.Actualite_PATH,
+                loadComponent: () => import('./app/pages/actualites/actualites').then((c) => c.ActualitesComponent),
+                data: { breadcrumb: 'Actualité' },
+            },
 
             { path: 'uikit', loadChildren: () => import('./app/pages/uikit/uikit.routes') },
             { path: 'documentation', component: Documentation },
